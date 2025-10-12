@@ -37,63 +37,75 @@ export default function Projects() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {filteredProjects.map((project) => (
-            <div
-              key={project.key}
-              className="bg-slate-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-700 hover:border-blue-500 cursor-pointer transform hover:scale-105"
-              onClick={() => setSelectedProject(project)}
-            >
-              {/* Image principale du projet */}
-              <div className="h-48 bg-gradient-to-br from-slate-700 to-slate-600 flex items-center justify-center overflow-hidden">
-                {project.image && (
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="object-contain h-full w-full"
-                  />
-                )}
-              </div>
+          {filteredProjects.map((project) => {
+            const hasMultipleVersions = project.versions.length > 1;
+            const currentVersion = project.versions[project.versions.length - 1]; // dernière version
 
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                {project.link && (
-                  <ExternalLink className="mx-auto text-blue-400 mb-2" size={24} />
-                )}
-
-                <p className="text-slate-300 text-sm mb-4 line-clamp-3">
-                  {project.description[0]}
-                </p>
-
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, idx) => (
-                    <span
-                      key={idx}
-                      className="flex items-center gap-1 px-3 py-1 bg-slate-700 text-blue-300 rounded-full text-xs font-medium"
-                    >
-                      <Tag size={12} />
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="flex flex-wrap gap-2">
-                  {project.technos.slice(0, 3).map((tech, idx) => (
-                    <span
-                      key={idx}
-                      className="px-3 py-1 bg-slate-900 text-slate-300 rounded-full text-xs"
-                    >
-                      {tech.name}
-                    </span>
-                  ))}
-                  {project.technos.length > 3 && (
-                    <span className="px-3 py-1 bg-slate-900 text-slate-400 rounded-full text-xs">
-                      +{project.technos.length - 3}
-                    </span>
+            return (
+              <div
+                key={project.key}
+                className="bg-slate-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-700 hover:border-blue-500 cursor-pointer transform hover:scale-105"
+                onClick={() => setSelectedProject(project)}
+              >
+                {/* Image principale du projet */}
+                <div className="h-48 bg-gradient-to-br from-slate-700 to-slate-600 flex items-center justify-center overflow-hidden">
+                  {project.image && (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="object-contain h-full w-full"
+                    />
                   )}
                 </div>
+
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    {project.title}
+                    {hasMultipleVersions && (
+                      <span className="ml-2 text-xs bg-blue-700 text-white px-2 py-1 rounded-full align-middle">
+                        {currentVersion.version}
+                      </span>
+                    )}
+                  </h3>
+                  {project.link && (
+                    <ExternalLink className="mx-auto text-blue-400 mb-2" size={24} />
+                  )}
+
+                  <p className="text-slate-300 text-sm mb-4 line-clamp-3">
+                    {project.description[0]}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag, idx) => (
+                      <span
+                        key={idx}
+                        className="flex items-center gap-1 px-3 py-1 bg-slate-700 text-blue-300 rounded-full text-xs font-medium"
+                      >
+                        <Tag size={12} />
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex flex-wrap gap-2">
+                    {currentVersion.technos.slice(0, 3).map((tech, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1 bg-slate-900 text-slate-300 rounded-full text-xs"
+                      >
+                        {tech.name}
+                      </span>
+                    ))}
+                    {currentVersion.technos.length > 3 && (
+                      <span className="px-3 py-1 bg-slate-900 text-slate-400 rounded-full text-xs">
+                        +{currentVersion.technos.length - 3}
+                      </span>
+                    )}
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 

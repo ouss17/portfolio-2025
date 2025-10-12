@@ -4,7 +4,7 @@ export const profile = {
   email: "mr.ousmanediarra@gmail.com",
   phone: "+33 7 78 13 52 95",
   location: "France",
-  bio: "Passionné de l'univers du web, avec presque 3 ans d'expérience en développement de sites internet et d'applications mobiles. Les missions d'intégration web et développement fullstack font partie de mon quotidien. Organisé et autodidacte, je suis enthousiaste à l'idée de mettre mes compétences et mon dynamisme au service de votre entreprise.",
+  bio: "Passionné de l'univers du web, avec 2 ans d'expérience en développement de sites internet et d'applications mobiles. Les missions d'intégration web et développement fullstack font partie de mon quotidien. Organisé et autodidacte, je suis enthousiaste à l'idée de mettre mes compétences et mon dynamisme au service de votre entreprise.",
 
   skills: {
     languages: ["HTML", "CSS", "JavaScript", "TypeScript", "PHP", "Java", "SQL", "NoSQL"],

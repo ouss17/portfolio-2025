@@ -57,6 +57,13 @@ import gachanote1 from '../assets/projects/gachanote1.jpg';
 import gachanote2 from '../assets/projects/gachanote2.jpg';
 import gachanote3 from '../assets/projects/gachanote3.jpg';
 import gachanote4 from '../assets/projects/gachanote4.jpg';
+import gachanoteV2_1 from '../assets/projects/gachanote_v2_1.jpg';
+import gachanoteV2_2 from '../assets/projects/gachanote_v2_2.jpg';
+import gachanoteV2_3 from '../assets/projects/gachanote_v2_3.jpg';
+import gachanoteV2_4 from '../assets/projects/gachanote_v2_4.jpg';
+import gachanoteV2_5 from '../assets/projects/gachanote_v2_5.jpg';
+import gachanoteV2_6 from '../assets/projects/gachanote_v2_6.jpg';
+import gachanoteV2_7 from '../assets/projects/gachanote_v2_7.jpg';
 import jiamini1 from '../assets/projects/jiamini1.png';
 import jiamini2 from '../assets/projects/jiamini2.png';
 import jiamini3 from '../assets/projects/jiamini3.png';
@@ -82,16 +89,22 @@ export const projects = [
       "Un site de présentation de l'anime Kimetsu no Yaiba ou Demon Slayer de Koyoharu Goutouge et produit par Ufotable."
     ],
     image: kny,
-    slides: [
-      { img: kny1, alt: "Présentation 1" },
-      { img: kny2, alt: "Présentation 2" }
-    ],
-    technos: [
-      { name: "HTML", percentage: 70 },
-      { name: "CSS", percentage: 25 },
-      { name: "JS", percentage: 5 }
-    ],
-    tags: ["react", "html", "css", "js"]
+    tags: ["react", "html", "css", "js"],
+    versions: [
+      {
+        version: "v1",
+        technos: [
+          { name: "react", percentage: 70 },
+          { name: "html", percentage: 70 },
+          { name: "css", percentage: 25 },
+          { name: "js", percentage: 5 }
+        ],
+        slides: [
+          { img: kny1, alt: "Présentation 1" },
+          { img: kny2, alt: "Présentation 2" }
+        ]
+      }
+    ]
   },
   {
     key: "pcbp",
@@ -100,20 +113,26 @@ export const projects = [
       "Achetez des composants ou des tours déjà montées. Site programmé avec le modèle MVC."
     ],
     image: pcbp,
-    slides: [
-      { img: pcbp1, alt: "Admin" },
-      { img: pcbp2, alt: "Liste 1" },
-      { img: pcbp3, alt: "Liste 2" },
-      { img: pcbp4, alt: "Produit" }
-    ],
-    technos: [
-      { name: "PHP", percentage: 32 },
-      { name: "HTML", percentage: 30 },
-      { name: "CSS", percentage: 19 },
-      { name: "SQL", percentage: 11 },
-      { name: "JS", percentage: 8 }
-    ],
-    tags: ["php", "mvc", "html", "css", "sql", "js"]
+    tags: ["php", "mvc", "html", "css", "sql", "js"],
+    versions: [
+      {
+        version: "v1",
+        technos: [
+          { name: "php", percentage: 32 },
+          { name: "mvc", percentage: 32 },
+          { name: "html", percentage: 30 },
+          { name: "css", percentage: 19 },
+          { name: "sql", percentage: 11 },
+          { name: "js", percentage: 8 }
+        ],
+        slides: [
+          { img: pcbp1, alt: "Admin" },
+          { img: pcbp2, alt: "Liste 1" },
+          { img: pcbp3, alt: "Liste 2" },
+          { img: pcbp4, alt: "Produit" }
+        ]
+      }
+    ]
   },
   {
     key: "streamingWorld",
@@ -122,20 +141,26 @@ export const projects = [
       "Regardez vos animes préférés et accédez à la boutique en ligne. Présentation des personnages principaux en streaming."
     ],
     image: streamingWorld,
-    slides: [
-      { img: streamingWorld1, alt: "Episodes" },
-      { img: streamingWorld2, alt: "Détails produits" },
-      { img: streamingWorld3, alt: "Produits" },
-      { img: streamingWorld4, alt: "Streaming" }
-    ],
-    technos: [
-      { name: "HTML", percentage: 60 },
-      { name: "CSS", percentage: 20 },
-      { name: "PHP", percentage: 12 },
-      { name: "SQL", percentage: 6 },
-      { name: "JS", percentage: 2 }
-    ],
-    tags: ["mvc", "html", "css", "php", "sql", "js"]
+    tags: ["mvc", "html", "css", "php", "sql", "js"],
+    versions: [
+      {
+        version: "v1",
+        technos: [
+          { name: "mvc", percentage: 30 },
+          { name: "html", percentage: 60 },
+          { name: "css", percentage: 20 },
+          { name: "php", percentage: 12 },
+          { name: "sql", percentage: 6 },
+          { name: "js", percentage: 2 }
+        ],
+        slides: [
+          { img: streamingWorld1, alt: "Episodes" },
+          { img: streamingWorld2, alt: "Détails produits" },
+          { img: streamingWorld3, alt: "Produits" },
+          { img: streamingWorld4, alt: "Streaming" }
+        ]
+      }
+    ]
   },
   {
     key: "evilHunter",
@@ -144,15 +169,21 @@ export const projects = [
       "Mini jeu JS/JQuery : combattez des monstres la nuit pour survivre !"
     ],
     image: evilHunter,
-    slides: [
-      { img: evilHunter, alt: "evil hunter" }
-    ],
-    technos: [
-      { name: "JS", percentage: 52 },
-      { name: "CSS", percentage: 31 },
-      { name: "HTML", percentage: 17 }
-    ],
-    tags: ["js", "jquery", "html", "css"]
+    tags: ["js", "jquery", "html", "css"],
+    versions: [
+      {
+        version: "v1",
+        technos: [
+          { name: "js", percentage: 52 },
+          { name: "jquery", percentage: 40 },
+          { name: "html", percentage: 17 },
+          { name: "css", percentage: 31 }
+        ],
+        slides: [
+          { img: evilHunter, alt: "evil hunter" }
+        ]
+      }
+    ]
   },
   {
     key: "chat",
@@ -161,18 +192,24 @@ export const projects = [
       "Tchat en temps réel avec espace offres d'emploi. PHP orienté objet et API."
     ],
     image: chat,
-    slides: [
-      { img: tchat1, alt: "Tchat 1" },
-      { img: tchat2, alt: "Tchat 2" }
-    ],
-    technos: [
-      { name: "PHP", percentage: 33 },
-      { name: "HTML", percentage: 29 },
-      { name: "CSS", percentage: 23 },
-      { name: "JS", percentage: 9 },
-      { name: "SQL", percentage: 6 }
-    ],
-    tags: ["php", "api", "html", "css", "js", "sql"]
+    tags: ["php", "api", "html", "css", "js", "sql"],
+    versions: [
+      {
+        version: "v1",
+        technos: [
+          { name: "php", percentage: 33 },
+          { name: "api", percentage: 10 },
+          { name: "html", percentage: 29 },
+          { name: "css", percentage: 23 },
+          { name: "js", percentage: 9 },
+          { name: "sql", percentage: 6 }
+        ],
+        slides: [
+          { img: tchat1, alt: "Tchat 1" },
+          { img: tchat2, alt: "Tchat 2" }
+        ]
+      }
+    ]
   },
   {
     key: "pacman",
@@ -181,15 +218,20 @@ export const projects = [
       "Mini jeu Pacman JS : qui mangera le plus de fruits ?"
     ],
     image: pacman,
-    slides: [
-      { img: pacman, alt: "pacman" }
-    ],
-    technos: [
-      { name: "JS", percentage: 97 },
-      { name: "HTML", percentage: 1.5 },
-      { name: "CSS", percentage: 1.5 }
-    ],
-    tags: ["js", "html", "css"]
+    tags: ["js", "html", "css"],
+    versions: [
+      {
+        version: "v1",
+        technos: [
+          { name: "js", percentage: 97 },
+          { name: "html", percentage: 1.5 },
+          { name: "css", percentage: 1.5 }
+        ],
+        slides: [
+          { img: pacman, alt: "pacman" }
+        ]
+      }
+    ]
   },
   {
     key: "card",
@@ -198,16 +240,21 @@ export const projects = [
       "Animation de carte de paiement pour un visuel plus attrayant !"
     ],
     image: card,
-    video: cardVideo,
-    slides: [
-      { img: card, alt: "Carte" }
-    ],
-    technos: [
-      { name: "HTML", percentage: 40 },
-      { name: "CSS", percentage: 30 },
-      { name: "JS", percentage: 30 }
-    ],
-    tags: ["html", "css", "js"]
+    tags: ["html", "css", "js"],
+    versions: [
+      {
+        version: "v1",
+        technos: [
+          { name: "html", percentage: 40 },
+          { name: "css", percentage: 30 },
+          { name: "js", percentage: 30 }
+        ],
+        slides: [
+          { img: card, alt: "Carte" }
+        ],
+        video: cardVideo
+      }
+    ]
   },
   {
     key: "pegasus",
@@ -216,15 +263,20 @@ export const projects = [
       "Frontend d'un site de vente de voitures."
     ],
     image: pegasus,
-    slides: [
-      { img: pegasus, alt: "pegasus" }
-    ],
-    technos: [
-      { name: "HTML", percentage: 50 },
-      { name: "CSS", percentage: 35 },
-      { name: "JS", percentage: 15 }
-    ],
-    tags: ["html", "css", "js"]
+    tags: ["html", "css", "js"],
+    versions: [
+      {
+        version: "v1",
+        technos: [
+          { name: "html", percentage: 50 },
+          { name: "css", percentage: 35 },
+          { name: "js", percentage: 15 }
+        ],
+        slides: [
+          { img: pegasus, alt: "pegasus" }
+        ]
+      }
+    ]
   },
   {
     key: "tasbeeh",
@@ -233,18 +285,24 @@ export const projects = [
       "Application utilisant une API de Quran pour lire, écouter ou faire des évocations."
     ],
     image: tasbeeh,
-    slides: [
-      { img: tasbeeh1, alt: "Tasbeeh 1" },
-      { img: tasbeeh2, alt: "Tasbeeh 2" },
-      { img: tasbeeh3, alt: "Tasbeeh 3" },
-      { img: tasbeeh4, alt: "Tasbeeh 4" }
-    ],
-    technos: [
-      { name: "HTML", percentage: 66 },
-      { name: "CSS", percentage: 24 },
-      { name: "JS", percentage: 10 }
-    ],
-    tags: ["api", "html", "css", "js"]
+    tags: ["api", "html", "css", "js"],
+    versions: [
+      {
+        version: "v1",
+        technos: [
+          { name: "api", percentage: 20 },
+          { name: "html", percentage: 66 },
+          { name: "css", percentage: 24 },
+          { name: "js", percentage: 10 }
+        ],
+        slides: [
+          { img: tasbeeh1, alt: "Tasbeeh 1" },
+          { img: tasbeeh2, alt: "Tasbeeh 2" },
+          { img: tasbeeh3, alt: "Tasbeeh 3" },
+          { img: tasbeeh4, alt: "Tasbeeh 4" }
+        ]
+      }
+    ]
   },
   {
     key: "formateur",
@@ -253,17 +311,22 @@ export const projects = [
       "Import d'un fichier excel de formateurs, gestion en base de données."
     ],
     image: formateur,
-    slides: [
-      { img: formateur, alt: "formateur" }
-    ],
-    technos: [
-      { name: "JS", percentage: 35 },
-      { name: "HTML", percentage: 30 },
-      { name: "CSS", percentage: 20 },
-      { name: "PHP", percentage: 8 },
-      { name: "SQL", percentage: 7 }
-    ],
-    tags: ["php", "js", "html", "css", "sql"]
+    tags: ["php", "js", "html", "css", "sql"],
+    versions: [
+      {
+        version: "v1",
+        technos: [
+          { name: "php", percentage: 8 },
+          { name: "js", percentage: 35 },
+          { name: "html", percentage: 30 },
+          { name: "css", percentage: 20 },
+          { name: "sql", percentage: 7 }
+        ],
+        slides: [
+          { img: formateur, alt: "formateur" }
+        ]
+      }
+    ]
   },
   {
     key: "myStockage",
@@ -272,16 +335,21 @@ export const projects = [
       "Vérification d'état de sites (en ligne, stockage BDD, stockage FTP)."
     ],
     image: myStockage,
-    slides: [
-      { img: myStockage, alt: "stockage" }
-    ],
-    technos: [
-      { name: "PHP", percentage: 47 },
-      { name: "HTML", percentage: 26 },
-      { name: "CSS", percentage: 21 },
-      { name: "SQL", percentage: 6 }
-    ],
-    tags: ["php", "html", "css", "sql"]
+    tags: ["php", "html", "css", "sql"],
+    versions: [
+      {
+        version: "v1",
+        technos: [
+          { name: "php", percentage: 47 },
+          { name: "html", percentage: 26 },
+          { name: "css", percentage: 21 },
+          { name: "sql", percentage: 6 }
+        ],
+        slides: [
+          { img: myStockage, alt: "stockage" }
+        ]
+      }
+    ]
   },
   {
     key: "monades",
@@ -290,16 +358,21 @@ export const projects = [
       "Site de présentation d'entreprise fait avec React."
     ],
     image: monades,
-    slides: [
-      { img: monades1, alt: "Monades 1" },
-      { img: monades2, alt: "Monades 2" },
-      { img: monades3, alt: "Monades 3" }
-    ],
-    technos: [
-      { name: "REACT", percentage: 80 },
-      { name: "NODEJS", percentage: 20 }
-    ],
-    tags: ["react", "nodejs"]
+    tags: ["react", "nodejs"],
+    versions: [
+      {
+        version: "v1",
+        technos: [
+          { name: "react", percentage: 80 },
+          { name: "nodejs", percentage: 20 }
+        ],
+        slides: [
+          { img: monades1, alt: "Monades 1" },
+          { img: monades2, alt: "Monades 2" },
+          { img: monades3, alt: "Monades 3" }
+        ]
+      }
+    ]
   },
   {
     key: "ps3Ui",
@@ -308,15 +381,20 @@ export const projects = [
       "Reproduction de la navigation de la console Playstation 3."
     ],
     image: ps3Ui,
-    slides: [
-      { img: ps3UiSlide, alt: "ps3 ui" }
-    ],
-    technos: [
-      { name: "HTML", percentage: 50 },
-      { name: "CSS", percentage: 15 },
-      { name: "JS", percentage: 35 }
-    ],
-    tags: ["js", "html", "css"]
+    tags: ["html", "css", "js"],
+    versions: [
+      {
+        version: "v1",
+        technos: [
+          { name: "html", percentage: 50 },
+          { name: "css", percentage: 15 },
+          { name: "js", percentage: 35 }
+        ],
+        slides: [
+          { img: ps3UiSlide, alt: "ps3 ui" }
+        ]
+      }
+    ]
   },
   {
     key: "evasion",
@@ -325,38 +403,64 @@ export const projects = [
       "Projet EVASION du département des Hauts-de-Seine : gestion de contenus VR accessibles sur tablette et création de contenus VR."
     ],
     image: evasion,
-    slides: [
-      { img: evasion1, alt: "Evasion 1" },
-      { img: evasion2, alt: "Evasion 2" },
-      { img: evasion3, alt: "Evasion 3" },
-      { img: evasion4, alt: "Evasion 4" }
-    ],
-    technos: [
-      { name: "REACT", percentage: 60 },
-      { name: "SYMFONY", percentage: 30 },
-      { name: "FFMPEG", percentage: 8 },
-      { name: "STORYBOOK", percentage: 2 }
-    ],
-    tags: ["react", "symfony", "ffmpeg", "storybook"]
+    tags: ["react", "symfony", "ffmpeg", "storybook"],
+    versions: [
+      {
+        version: "v1",
+        technos: [
+          { name: "react", percentage: 60 },
+          { name: "symfony", percentage: 30 },
+          { name: "ffmpeg", percentage: 8 },
+          { name: "storybook", percentage: 2 }
+        ],
+        slides: [
+          { img: evasion1, alt: "Evasion 1" },
+          { img: evasion2, alt: "Evasion 2" },
+          { img: evasion3, alt: "Evasion 3" },
+          { img: evasion4, alt: "Evasion 4" }
+        ]
+      }
+    ]
   },
   {
     key: "linked",
-    title: "Linked Mosque",
+    title: "Linked",
     description: [
       "Application pour suivre les horaires de prières de la mosquée et les actualités."
     ],
     image: linked,
-    slides: [
-      { img: linked1, alt: "Linked 1" },
-      { img: linked2, alt: "Linked 2" },
-      { img: linked3, alt: "Linked 3" },
-      { img: linked4, alt: "Linked 4" }
-    ],
-    technos: [
-      { name: "REACT NATIVE", percentage: 80 },
-      { name: "PHP", percentage: 20 }
-    ],
-    tags: ["react native", "php"]
+    tags: ["react native", "php", "mysql", "expo", "nodejs", "mongodb"],
+    versions: [
+      {
+        version: "v1",
+        technos: [
+          { name: "react native", percentage: 80 },
+          { name: "php", percentage: 20 },
+          { name: "mysql", percentage: 20 }
+        ],
+        slides: [
+          { img: linked1, alt: "Linked v1 - 1" },
+          { img: linked2, alt: "Linked v1 - 2" },
+          { img: linked3, alt: "Linked v1 - 3" },
+          { img: linked4, alt: "Linked v1 - 4" }
+        ]
+      },
+      {
+        version: "v2",
+        technos: [
+          { name: "expo", percentage: 40 },
+          { name: "nodejs", percentage: 30 },
+          { name: "mysql", percentage: 15 },
+          { name: "mongodb", percentage: 15 }
+        ],
+        slides: [
+          { img: linked1, alt: "Linked v2 - 1" },
+          { img: linked2, alt: "Linked v2 - 2" },
+          { img: linked3, alt: "Linked v2 - 3" },
+          { img: linked4, alt: "Linked v2 - 4" }
+        ]
+      }
+    ]
   },
   {
     key: "todoreaction",
@@ -371,19 +475,24 @@ export const projects = [
       "- Interface moderne et responsive"
     ],
     image: todoreaction,
-    slides: [
-      { img: todoreaction1, alt: "todoreaction 1" },
-      { img: todoreaction2, alt: "todoreaction 2" },
-      { img: todoreaction3, alt: "todoreaction 3" },
-      { img: todoreaction4, alt: "todoreaction 4" }
-    ],
-    technos: [
-      { name: "EXPO", percentage: 40 },
-      { name: "REACT NATIVE", percentage: 30 },
-      { name: "TYPESCRIPT", percentage: 20 },
-      { name: "REDUX TOOLKIT", percentage: 10 }
-    ],
-    tags: ["expo", "react native", "typescript", "redux toolkit"]
+    tags: ["expo", "react native", "typescript", "redux toolkit"],
+    versions: [
+      {
+        version: "v1",
+        technos: [
+          { name: "expo", percentage: 40 },
+          { name: "react native", percentage: 30 },
+          { name: "typescript", percentage: 20 },
+          { name: "redux toolkit", percentage: 10 }
+        ],
+        slides: [
+          { img: todoreaction1, alt: "todoreaction 1" },
+          { img: todoreaction2, alt: "todoreaction 2" },
+          { img: todoreaction3, alt: "todoreaction 3" },
+          { img: todoreaction4, alt: "todoreaction 4" }
+        ]
+      }
+    ]
   },
   {
     key: "gachanote",
@@ -396,19 +505,40 @@ export const projects = [
       "- Comparer leurs dépenses entre plusieurs jeux et sur différentes périodes."
     ],
     image: gachanote,
-    slides: [
-      { img: gachanote1, alt: "gachanote 1" },
-      { img: gachanote2, alt: "gachanote 2" },
-      { img: gachanote3, alt: "gachanote 3" },
-      { img: gachanote4, alt: "gachanote 4" }
-    ],
-    technos: [
-      { name: "EXPO", percentage: 40 },
-      { name: "REACT NATIVE", percentage: 30 },
-      { name: "TYPESCRIPT", percentage: 20 },
-      { name: "REDUX TOOLKIT", percentage: 10 }
-    ],
-    tags: ["expo", "react native", "typescript", "redux toolkit"]
+    tags: ["expo", "react native", "typescript", "redux toolkit"],
+    versions: [
+      {
+        version: "v1",
+        technos: [
+          { name: "expo", percentage: 60 },
+          { name: "redux toolkit", percentage: 40 }
+        ],
+        slides: [
+          { img: gachanote1, alt: "GachaNote v1 - 1" },
+          { img: gachanote2, alt: "GachaNote v1 - 2" },
+          { img: gachanote3, alt: "GachaNote v1 - 3" },
+          { img: gachanote4, alt: "GachaNote v1 - 4" }
+        ]
+      },
+      {
+        version: "v2",
+        technos: [
+          { name: "expo", percentage: 40 },
+          { name: "react native", percentage: 30 },
+          { name: "typescript", percentage: 20 },
+          { name: "redux toolkit", percentage: 10 }
+        ],
+        slides: [
+          { img: gachanoteV2_1, alt: "GachaNote v2 - 1" },
+          { img: gachanoteV2_2, alt: "GachaNote v2 - 2" },
+          { img: gachanoteV2_3, alt: "GachaNote v2 - 3" },
+          { img: gachanoteV2_4, alt: "GachaNote v2 - 4" },
+          { img: gachanoteV2_5, alt: "GachaNote v2 - 5" },
+          { img: gachanoteV2_6, alt: "GachaNote v2 - 6" },
+          { img: gachanoteV2_7, alt: "GachaNote v2 - 7" }
+        ]
+      }
+    ]
   },
   {
     key: "jiamini",
@@ -418,19 +548,24 @@ export const projects = [
       "Elle propose aussi l'histoire de personnages historiques selon le pays sélectionné."
     ],
     image: jiamini,
-    slides: [
-      { img: jiamini1, alt: "jiamini 1" },
-      { img: jiamini2, alt: "jiamini 2" },
-      { img: jiamini3, alt: "jiamini 3" },
-      { img: jiamini4, alt: "jiamini 4" }
-    ],
-    technos: [
-      { name: "EXPO", percentage: 40 },
-      { name: "JAVA (BACK)", percentage: 30 },
-      { name: "REACT NATIVE", percentage: 15 },
-      { name: "POSTGRESQL", percentage: 15 }
-    ],
-    tags: ["expo", "java", "react native", "postgresql"]
+    tags: ["expo", "java", "react native", "postgresql"],
+    versions: [
+      {
+        version: "v1",
+        technos: [
+          { name: "expo", percentage: 40 },
+          { name: "java", percentage: 30 },
+          { name: "react native", percentage: 15 },
+          { name: "postgresql", percentage: 15 }
+        ],
+        slides: [
+          { img: jiamini1, alt: "jiamini 1" },
+          { img: jiamini2, alt: "jiamini 2" },
+          { img: jiamini3, alt: "jiamini 3" },
+          { img: jiamini4, alt: "jiamini 4" }
+        ]
+      }
+    ]
   },
   {
     key: "eclat",
@@ -440,21 +575,26 @@ export const projects = [
       "On peut s'inscrire bénévolement à une association et faire des dons si on le souhaite."
     ],
     image: eclat,
-    slides: [
-      { img: eclat1, alt: "eclat 1" },
-      { img: eclat2, alt: "eclat 2" },
-      { img: eclat3, alt: "eclat 3" },
-      { img: eclat4, alt: "eclat 4" },
-      { img: eclat5, alt: "eclat 5" },
-      { img: eclat6, alt: "eclat 6" },
-      { img: eclat7, alt: "eclat 7" }
-    ],
-    technos: [
-      { name: "REACT", percentage: 50 },
-      { name: "NODEJS", percentage: 30 },
-      { name: "JAVASCRIPT", percentage: 20 }
-    ],
-    tags: ["react", "nodejs", "js"]
+    tags: ["react", "nodejs", "js"],
+    versions: [
+      {
+        version: "v1",
+        technos: [
+          { name: "react", percentage: 50 },
+          { name: "nodejs", percentage: 30 },
+          { name: "js", percentage: 20 }
+        ],
+        slides: [
+          { img: eclat1, alt: "eclat 1" },
+          { img: eclat2, alt: "eclat 2" },
+          { img: eclat3, alt: "eclat 3" },
+          { img: eclat4, alt: "eclat 4" },
+          { img: eclat5, alt: "eclat 5" },
+          { img: eclat6, alt: "eclat 6" },
+          { img: eclat7, alt: "eclat 7" }
+        ]
+      }
+    ]
   },
   {
     key: "portfolio2020",
@@ -463,19 +603,24 @@ export const projects = [
       "Mon ancien portfolio présentant mes projets et compétences sur un design de windows 10."
     ],
     image: portfolio,
-    slides: [
-      { img: portfolio1, alt: "portfolio 1" },
-      { img: portfolio2, alt: "portfolio 2" },
-      { img: portfolio3, alt: "portfolio 3" },
-      { img: portfolio4, alt: "portfolio 4" },
-      { img: portfolio5, alt: "portfolio 5" }
-    ],
-    technos: [
-      { name: "HTML", percentage: 40 },
-      { name: "CSS", percentage: 35 },
-      { name: "JAVASCRIPT", percentage: 25 }
-    ],
     tags: ["html", "css", "js"],
+    versions: [
+      {
+        version: "v1",
+        technos: [
+          { name: "html", percentage: 40 },
+          { name: "css", percentage: 35 },
+          { name: "js", percentage: 25 }
+        ],
+        slides: [
+          { img: portfolio1, alt: "portfolio 1" },
+          { img: portfolio2, alt: "portfolio 2" },
+          { img: portfolio3, alt: "portfolio 3" },
+          { img: portfolio4, alt: "portfolio 4" },
+          { img: portfolio5, alt: "portfolio 5" }
+        ]
+      }
+    ],
     link: "https://portfolio-2020-vl56.vercel.app"
   }
 ];
