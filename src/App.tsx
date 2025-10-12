@@ -1,4 +1,4 @@
-import { Analytics } from "@vercel/analytics/next"
+
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
@@ -19,7 +19,6 @@ function App() {
       <Education />
       <Contact />
       <Footer />
-      <Analytics />
     </div>
   );
 }
