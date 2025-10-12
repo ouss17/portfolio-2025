@@ -1,8 +1,11 @@
-import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Github, Globe } from 'lucide-react';
 import { profile } from '../data/profile';
 import '../styles/contact.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Contact() {
+  const navigate = useNavigate();
+
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-6">
@@ -87,6 +90,20 @@ export default function Contact() {
                 <div>
                   <p className="text-sm text-slate-300 mb-1">GitHub</p>
                   <p className="font-semibold">@ouss17</p>
+                </div>
+              </a>
+
+              <a
+                href="#"
+                onClick={e => { e.preventDefault(); navigate('/akhidev'); }}
+                className="contact-item flex items-center gap-4 p-6 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20 cursor-pointer"
+              >
+                <div className="p-3 bg-blue-600 rounded-lg">
+                  <Globe size={24} />
+                </div>
+                <div>
+                  <p className="text-sm text-slate-300 mb-1">Organisation</p>
+                  <p className="font-semibold">Akhi Dev</p>
                 </div>
               </a>
             </div>
