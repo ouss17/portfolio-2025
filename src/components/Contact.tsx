@@ -94,7 +94,7 @@ export default function Contact() {
             <div className="text-center pt-8 border-t border-white/20">
               <p className="text-slate-300 mb-4">Télécharger mon CV</p>
               <a
-                href="/assets/cv/Ousmane_Diarra.pdf"
+                href="/Ousmane_Diarra.pdf"
                 download
                 className="contact-cv-btn bg-gradient-to-r from-blue-600 to-cyan-600 px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105 inline-block"
               >
