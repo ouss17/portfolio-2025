@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ExternalLink, Tag, ArrowLeft } from 'lucide-react';
+import { ExternalLink, Tag, ArrowLeft, Github } from 'lucide-react';
 import { projects } from '../data/projects';
 import ProjectModal from './ProjectModal';
 
@@ -48,7 +48,17 @@ export default function AllProjects() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {filteredProjects.map((project) => {
             const hasMultipleVersions = project.versions.length > 1;
-            const currentVersion = project.versions[project.versions.length - 1];
+            const lastVersion = project.versions[project.versions.length - 1];
+
+            // Cherche les liens github au niveau version, sinon au niveau projet
+            const githubLink =
+              lastVersion.githubLink ||
+              project.githubLink ||
+              null;
+            const githubLinkBackend =
+              lastVersion.githubLinkBackend ||
+              project.githubLinkBackend ||
+              null;
 
             return (
               <div
@@ -72,13 +82,61 @@ export default function AllProjects() {
                     {project.title}
                     {hasMultipleVersions && (
                       <span className="ml-2 text-xs bg-blue-700 text-white px-2 py-1 rounded-full align-middle">
-                        {currentVersion.version}
+                        {lastVersion.version}
                       </span>
                     )}
                   </h3>
-                  {project.link && (
-                    <ExternalLink className="mx-auto text-blue-400 mb-2" size={24} />
-                  )}
+                  <div className="flex flex-wrap gap-3 mb-2">
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Voir le site"
+                        className="text-blue-400 hover:text-blue-600 transition"
+                      >
+                        <ExternalLink size={22} />
+                      </a>
+                    )}
+                    {githubLinkBackend ? (
+                      <>
+                        {githubLink && (
+                          <a
+                            href={githubLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="GitHub Frontend"
+                            className="text-slate-300 hover:text-blue-500 transition flex items-center gap-1"
+                          >
+                            <Github size={20} />
+                            <span className="text-xs">Front</span>
+                          </a>
+                        )}
+                        <a
+                          href={githubLinkBackend}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="GitHub Backend"
+                          className="text-slate-300 hover:text-blue-500 transition flex items-center gap-1"
+                        >
+                          <Github size={20} />
+                          <span className="text-xs">Back</span>
+                        </a>
+                      </>
+                    ) : (
+                      githubLink && (
+                        <a
+                          href={githubLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="GitHub"
+                          className="text-slate-300 hover:text-blue-500 transition"
+                        >
+                          <Github size={20} />
+                        </a>
+                      )
+                    )}
+                  </div>
 
                   <p className="text-slate-300 text-sm mb-4 line-clamp-3">
                     {project.description[0]}
@@ -97,7 +155,7 @@ export default function AllProjects() {
                   </div>
 
                   <div className="flex flex-wrap gap-2">
-                    {currentVersion.technos.slice(0, 3).map((tech, idx) => (
+                    {lastVersion.technos.slice(0, 3).map((tech, idx) => (
                       <span
                         key={idx}
                         className="px-3 py-1 bg-slate-900 text-slate-300 rounded-full text-xs"
@@ -105,9 +163,9 @@ export default function AllProjects() {
                         {tech.name}
                       </span>
                     ))}
-                    {currentVersion.technos.length > 3 && (
+                    {lastVersion.technos.length > 3 && (
                       <span className="px-3 py-1 bg-slate-900 text-slate-400 rounded-full text-xs">
-                        +{currentVersion.technos.length - 3}
+                        +{lastVersion.technos.length - 3}
                       </span>
                     )}
                   </div>

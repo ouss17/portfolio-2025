@@ -80,6 +80,7 @@ import portfolio2 from '../assets/projects/portfolio2.png';
 import portfolio3 from '../assets/projects/portfolio3.png';
 import portfolio4 from '../assets/projects/portfolio4.png';
 import portfolio5 from '../assets/projects/portfolio5.png';
+import { g } from 'framer-motion/client';
 
 export const projects = [
   {
@@ -90,6 +91,8 @@ export const projects = [
     ],
     image: kny,
     tags: ["react", "html", "css", "js"],
+    githubLink: null,
+    githubLinkBackend: null,
     versions: [
       {
         version: "v1",
@@ -102,7 +105,9 @@ export const projects = [
         slides: [
           { img: kny1, alt: "Présentation 1" },
           { img: kny2, alt: "Présentation 2" }
-        ]
+        ],
+        githubLink: null,
+        githubLinkBackend: null
       }
     ]
   },
@@ -112,6 +117,8 @@ export const projects = [
     description: [
       "Achetez des composants ou des tours déjà montées. Site programmé avec le modèle MVC."
     ],
+    githubLink: "https://github.com/ouss17/pcbp",
+    githubLinkBackend: null,
     image: pcbp,
     tags: ["php", "mvc", "html", "css", "sql", "js"],
     versions: [
@@ -130,7 +137,9 @@ export const projects = [
           { img: pcbp2, alt: "Liste 1" },
           { img: pcbp3, alt: "Liste 2" },
           { img: pcbp4, alt: "Produit" }
-        ]
+        ],
+        githubLink: null,
+        githubLinkBackend: null
       }
     ]
   },
@@ -140,6 +149,8 @@ export const projects = [
     description: [
       "Regardez vos animes préférés et accédez à la boutique en ligne. Présentation des personnages principaux en streaming."
     ],
+    githubLink: "https://github.com/AkhiDev-Official/Streaming-World",
+    githubLinkBackend: null,
     image: streamingWorld,
     tags: ["mvc", "html", "css", "php", "sql", "js"],
     versions: [
@@ -158,7 +169,9 @@ export const projects = [
           { img: streamingWorld2, alt: "Détails produits" },
           { img: streamingWorld3, alt: "Produits" },
           { img: streamingWorld4, alt: "Streaming" }
-        ]
+        ],
+        githubLink: null,
+        githubLinkBackend: null
       }
     ]
   },
@@ -168,6 +181,8 @@ export const projects = [
     description: [
       "Mini jeu JS/JQuery : combattez des monstres la nuit pour survivre !"
     ],
+    githubLink: "https://github.com/ouss17/evil_hunter",
+    githubLinkBackend: null,
     image: evilHunter,
     tags: ["js", "jquery", "html", "css"],
     versions: [
@@ -181,7 +196,9 @@ export const projects = [
         ],
         slides: [
           { img: evilHunter, alt: "evil hunter" }
-        ]
+        ],
+        githubLink: null,
+        githubLinkBackend: null
       }
     ]
   },
@@ -191,6 +208,8 @@ export const projects = [
     description: [
       "Tchat en temps réel avec espace offres d'emploi. PHP orienté objet et API."
     ],
+    githubLink: "https://github.com/AkhiDev-Official/TchatNumerique",
+    githubLinkBackend: null,
     image: chat,
     tags: ["php", "api", "html", "css", "js", "sql"],
     versions: [
@@ -207,7 +226,9 @@ export const projects = [
         slides: [
           { img: tchat1, alt: "Tchat 1" },
           { img: tchat2, alt: "Tchat 2" }
-        ]
+        ],
+        githubLink: null,
+        githubLinkBackend: null
       }
     ]
   },
@@ -217,6 +238,8 @@ export const projects = [
     description: [
       "Mini jeu Pacman JS : qui mangera le plus de fruits ?"
     ],
+    githubLink: "https://github.com/AkhiDev-Official/PacMan",
+    githubLinkBackend: null,
     image: pacman,
     tags: ["js", "html", "css"],
     versions: [
@@ -229,7 +252,9 @@ export const projects = [
         ],
         slides: [
           { img: pacman, alt: "pacman" }
-        ]
+        ],
+        githubLink: null,
+        githubLinkBackend: null
       }
     ]
   },
@@ -239,6 +264,8 @@ export const projects = [
     description: [
       "Animation de carte de paiement pour un visuel plus attrayant !"
     ],
+    githubLink: "https://github.com/AkhiDev-Official/Animated_paiement_card",
+    githubLinkBackend: null,
     image: card,
     tags: ["html", "css", "js"],
     versions: [
@@ -252,7 +279,9 @@ export const projects = [
         slides: [
           { img: card, alt: "Carte" }
         ],
-        video: cardVideo
+        video: cardVideo,
+        githubLink: null,
+        githubLinkBackend: null
       }
     ]
   },
@@ -262,6 +291,8 @@ export const projects = [
     description: [
       "Frontend d'un site de vente de voitures."
     ],
+    githubLink: null,
+    githubLinkBackend: null,
     image: pegasus,
     tags: ["html", "css", "js"],
     versions: [
@@ -274,7 +305,9 @@ export const projects = [
         ],
         slides: [
           { img: pegasus, alt: "pegasus" }
-        ]
+        ],
+        githubLink: null,
+        githubLinkBackend: null
       }
     ]
   },
@@ -284,6 +317,8 @@ export const projects = [
     description: [
       "Application utilisant une API de Quran pour lire, écouter ou faire des évocations."
     ],
+    githubLink: "https://github.com/AkhiDev-Official/Tasbeeh-2.0-Web",
+    githubLinkBackend: null,
     image: tasbeeh,
     tags: ["api", "html", "css", "js"],
     versions: [
@@ -300,7 +335,9 @@ export const projects = [
           { img: tasbeeh2, alt: "Tasbeeh 2" },
           { img: tasbeeh3, alt: "Tasbeeh 3" },
           { img: tasbeeh4, alt: "Tasbeeh 4" }
-        ]
+        ],
+        githubLink: null,
+        githubLinkBackend: null
       }
     ]
   },
@@ -310,6 +347,8 @@ export const projects = [
     description: [
       "Import d'un fichier excel de formateurs, gestion en base de données."
     ],
+    githubLink: "https://github.com/ouss17/formateurs",
+    githubLinkBackend: null,
     image: formateur,
     tags: ["php", "js", "html", "css", "sql"],
     versions: [
@@ -324,7 +363,9 @@ export const projects = [
         ],
         slides: [
           { img: formateur, alt: "formateur" }
-        ]
+        ],
+        githubLink: null,
+        githubLinkBackend: null
       }
     ]
   },
@@ -334,6 +375,8 @@ export const projects = [
     description: [
       "Vérification d'état de sites (en ligne, stockage BDD, stockage FTP)."
     ],
+    githubLink: "https://github.com/ouss17/myStockage",
+    githubLinkBackend: null,
     image: myStockage,
     tags: ["php", "html", "css", "sql"],
     versions: [
@@ -347,7 +390,9 @@ export const projects = [
         ],
         slides: [
           { img: myStockage, alt: "stockage" }
-        ]
+        ],
+        githubLink: null,
+        githubLinkBackend: null
       }
     ]
   },
@@ -357,6 +402,8 @@ export const projects = [
     description: [
       "Site de présentation d'entreprise fait avec React."
     ],
+    githubLink: null,
+    githubLinkBackend: null,
     image: monades,
     tags: ["react", "nodejs"],
     versions: [
@@ -370,7 +417,9 @@ export const projects = [
           { img: monades1, alt: "Monades 1" },
           { img: monades2, alt: "Monades 2" },
           { img: monades3, alt: "Monades 3" }
-        ]
+        ],
+        githubLink: null,
+        githubLinkBackend: null
       }
     ]
   },
@@ -380,6 +429,8 @@ export const projects = [
     description: [
       "Reproduction de la navigation de la console Playstation 3."
     ],
+    githubLink: null,
+    githubLinkBackend: null,
     image: ps3Ui,
     tags: ["html", "css", "js"],
     versions: [
@@ -392,7 +443,9 @@ export const projects = [
         ],
         slides: [
           { img: ps3UiSlide, alt: "ps3 ui" }
-        ]
+        ],
+        githubLink: null,
+        githubLinkBackend: null
       }
     ]
   },
@@ -402,6 +455,8 @@ export const projects = [
     description: [
       "Projet EVASION du département des Hauts-de-Seine : gestion de contenus VR accessibles sur tablette et création de contenus VR."
     ],
+    githubLink: null,
+    githubLinkBackend: null,
     image: evasion,
     tags: ["react", "symfony", "ffmpeg", "storybook"],
     versions: [
@@ -418,7 +473,9 @@ export const projects = [
           { img: evasion2, alt: "Evasion 2" },
           { img: evasion3, alt: "Evasion 3" },
           { img: evasion4, alt: "Evasion 4" }
-        ]
+        ],
+        githubLink: null,
+        githubLinkBackend: null
       }
     ]
   },
@@ -429,6 +486,8 @@ export const projects = [
       "Application pour suivre les horaires de prières de la mosquée et les actualités."
     ],
     image: linked,
+    githubLink: "https://github.com/ouss17/linked_front",
+    githubLinkBackend: "https://github.com/ouss17/linked_back",
     tags: ["react native", "php", "mysql", "expo", "nodejs", "mongodb"],
     versions: [
       {
@@ -443,10 +502,14 @@ export const projects = [
           { img: linked2, alt: "Linked v1 - 2" },
           { img: linked3, alt: "Linked v1 - 3" },
           { img: linked4, alt: "Linked v1 - 4" }
-        ]
+        ],
+        githubLink: null,
+        githubLinkBackend: null
       },
       {
         version: "v2",
+        githubLink: "https://github.com/ouss17/sajda-front",
+        githubLinkBackend: "https://github.com/ouss17/sajda_back",
         technos: [
           { name: "expo", percentage: 40 },
           { name: "nodejs", percentage: 30 },
@@ -474,6 +537,8 @@ export const projects = [
       "- Thèmes visuels persistants",
       "- Interface moderne et responsive"
     ],
+    githubLink: "https://github.com/ouss17/expo-todolist",
+    githubLinkBackend: null,
     image: todoreaction,
     tags: ["expo", "react native", "typescript", "redux toolkit"],
     versions: [
@@ -490,7 +555,9 @@ export const projects = [
           { img: todoreaction2, alt: "todoreaction 2" },
           { img: todoreaction3, alt: "todoreaction 3" },
           { img: todoreaction4, alt: "todoreaction 4" }
-        ]
+        ],
+        githubLink: null,
+        githubLinkBackend: null
       }
     ]
   },
@@ -504,6 +571,8 @@ export const projects = [
       "- Prendre conscience de leurs habitudes de consommation.",
       "- Comparer leurs dépenses entre plusieurs jeux et sur différentes périodes."
     ],
+    githubLink: "https://github.com/ouss17/gachanote",
+    githubLinkBackend: null,
     image: gachanote,
     tags: ["expo", "react native", "typescript", "redux toolkit"],
     versions: [
@@ -518,7 +587,9 @@ export const projects = [
           { img: gachanote2, alt: "GachaNote v1 - 2" },
           { img: gachanote3, alt: "GachaNote v1 - 3" },
           { img: gachanote4, alt: "GachaNote v1 - 4" }
-        ]
+        ],
+        githubLink: null,
+        githubLinkBackend: null
       },
       {
         version: "v2",
@@ -536,7 +607,9 @@ export const projects = [
           { img: gachanoteV2_5, alt: "GachaNote v2 - 5" },
           { img: gachanoteV2_6, alt: "GachaNote v2 - 6" },
           { img: gachanoteV2_7, alt: "GachaNote v2 - 7" }
-        ]
+        ],
+        githubLink: null,
+        githubLinkBackend: null
       }
     ]
   },
@@ -547,6 +620,8 @@ export const projects = [
       "Jiamini est une application mobile qui facilite l'apprentissage scolaire en Afrique en proposant des cours adaptés (PDF, vidéo, image, jeu).",
       "Elle propose aussi l'histoire de personnages historiques selon le pays sélectionné."
     ],
+    githubLink: null,
+    githubLinkBackend: null,
     image: jiamini,
     tags: ["expo", "java", "react native", "postgresql"],
     versions: [
@@ -563,7 +638,9 @@ export const projects = [
           { img: jiamini2, alt: "jiamini 2" },
           { img: jiamini3, alt: "jiamini 3" },
           { img: jiamini4, alt: "jiamini 4" }
-        ]
+        ],
+        githubLink: null,
+        githubLinkBackend: null
       }
     ]
   },
@@ -574,6 +651,8 @@ export const projects = [
       "Éclat Solidaire est un site qui recense les associations ayant peu de visibilité et les événements disponibles.",
       "On peut s'inscrire bénévolement à une association et faire des dons si on le souhaite."
     ],
+    githubLink: null,
+    githubLinkBackend: null,
     image: eclat,
     tags: ["react", "nodejs", "js"],
     versions: [
@@ -592,7 +671,9 @@ export const projects = [
           { img: eclat5, alt: "eclat 5" },
           { img: eclat6, alt: "eclat 6" },
           { img: eclat7, alt: "eclat 7" }
-        ]
+        ],
+        githubLink: null,
+        githubLinkBackend: null
       }
     ]
   },
@@ -602,6 +683,8 @@ export const projects = [
     description: [
       "Mon ancien portfolio présentant mes projets et compétences sur un design de windows 10."
     ],
+    githubLink: "https://github.com/ouss17/portfolio-2020",
+    githubLinkBackend: null,
     image: portfolio,
     tags: ["html", "css", "js"],
     versions: [
@@ -618,7 +701,9 @@ export const projects = [
           { img: portfolio3, alt: "portfolio 3" },
           { img: portfolio4, alt: "portfolio 4" },
           { img: portfolio5, alt: "portfolio 5" }
-        ]
+        ],
+        githubLink: null,
+        githubLinkBackend: null
       }
     ],
     link: "https://portfolio-2020-vl56.vercel.app"
