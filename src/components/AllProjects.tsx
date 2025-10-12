@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ExternalLink, Tag } from 'lucide-react';
+import { ExternalLink, Tag, ArrowLeft } from 'lucide-react';
 import { projects } from '../data/projects';
 import ProjectModal from './ProjectModal';
 
-export default function Projects() {
+export default function AllProjects() {
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
   const [filterTag, setFilterTag] = useState<string>('all');
   const navigate = useNavigate();
@@ -15,14 +15,18 @@ export default function Projects() {
     ? projects
     : projects.filter(p => p.tags.includes(filterTag));
 
-  // Affiche uniquement les 6 derniers projets
-  const lastProjects = filteredProjects.slice(-6).reverse();
-
   return (
-    <section id="projets" className="py-20 bg-slate-900 text-white">
+    <section className="py-20 bg-slate-900 text-white min-h-screen">
       <div className="container mx-auto px-6">
+        <button
+          onClick={() => navigate('/')}
+          className="flex items-center gap-2 mb-8 px-5 py-2 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-all"
+        >
+          <ArrowLeft size={20} />
+          Retour à l'accueil
+        </button>
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
-          Mes Projets
+          Tous mes projets
         </h2>
 
         <div className="flex flex-wrap justify-center gap-3 mb-12">
@@ -42,9 +46,9 @@ export default function Projects() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {lastProjects.map((project) => {
+          {filteredProjects.map((project) => {
             const hasMultipleVersions = project.versions.length > 1;
-            const currentVersion = project.versions[project.versions.length - 1]; // dernière version
+            const currentVersion = project.versions[project.versions.length - 1];
 
             return (
               <div
@@ -111,15 +115,6 @@ export default function Projects() {
               </div>
             );
           })}
-        </div>
-
-        <div className="flex justify-center mt-12">
-          <button
-            onClick={() => navigate('/projets')}
-            className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300"
-          >
-            Voir tous mes projets
-          </button>
         </div>
       </div>
 
