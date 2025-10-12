@@ -8,6 +8,7 @@ import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import AkhiDev from './components/AkhiDev';
+import AllProjects from './components/AllProjects';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             </>
           } />
           <Route path="/akhidev" element={<AkhiDev />} />
+          <Route path="/projets" element={<AllProjects />} />
         </Routes>
       </div>
     </BrowserRouter>
