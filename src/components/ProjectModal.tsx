@@ -1,4 +1,4 @@
-import { X, ExternalLink } from 'lucide-react';
+import { X, ExternalLink, Github } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 interface Version {
@@ -6,6 +6,8 @@ interface Version {
   technos: { name: string; percentage: number }[];
   slides?: { img: string; alt: string }[];
   video?: string;
+  githubLink?: string | null;
+  githubLinkBackend?: string | null;
 }
 
 interface Project {
@@ -16,6 +18,8 @@ interface Project {
   tags: string[];
   versions: Version[];
   link?: string;
+  githubLink?: string | null;
+  githubLinkBackend?: string | null;
 }
 
 interface ProjectModalProps {
@@ -34,6 +38,25 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
   const [selectedImg, setSelectedImg] = useState<string | null>(null);
   const [versionIdx, setVersionIdx] = useState(0);
   const currentVersion = project.versions[versionIdx];
+
+  // Récupère les liens github pour la version sélectionnée ou le projet
+  const githubLink =
+    currentVersion.githubLink !== undefined
+      ? currentVersion.githubLink
+      : project.githubLink || null;
+  const githubLinkBackend =
+    currentVersion.githubLinkBackend !== undefined
+      ? currentVersion.githubLinkBackend
+      : project.githubLinkBackend || null;
+
+  // Vérifie si les liens changent selon la version
+  const hasDifferentGithubLinks =
+    project.versions.length > 1 &&
+    project.versions.some(
+      (v, idx, arr) =>
+        (v.githubLink !== arr[0].githubLink) ||
+        (v.githubLinkBackend !== arr[0].githubLinkBackend)
+    );
 
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
@@ -97,16 +120,66 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             </div>
           )}
 
-          {project.link && (
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 mb-6 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300"
-            >
-              <ExternalLink size={20} />
-              Voir directement le projet
-            </a>
+          {/* Liens Github et site */}
+          <div className="mb-6 flex flex-wrap gap-3">
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300"
+              >
+                <ExternalLink size={20} />
+                Voir directement le projet
+              </a>
+            )}
+            {currentVersion.githubLinkBackend ? (
+              <>
+                {currentVersion.githubLink && (
+                  <a
+                    href={currentVersion.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="GitHub Frontend"
+                    className="text-slate-300 hover:text-blue-500 transition flex items-center gap-1 px-6 py-3 bg-slate-700 rounded-full font-semibold"
+                  >
+                    <Github size={20} />
+                    <span className="text-xs">Front</span>
+                  </a>
+                )}
+                <a
+                  href={currentVersion.githubLinkBackend}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="GitHub Backend"
+                  className="text-slate-300 hover:text-blue-500 transition flex items-center gap-1 px-6 py-3 bg-slate-700 rounded-full font-semibold"
+                >
+                  <Github size={20} />
+                  <span className="text-xs">Back</span>
+                </a>
+              </>
+            ) : (
+              currentVersion.githubLink && (
+                <a
+                  href={currentVersion.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="GitHub"
+                  className="text-slate-300 hover:text-blue-500 transition px-6 py-3 bg-slate-700 rounded-full font-semibold flex items-center gap-1"
+                >
+                  <Github size={20} />
+                </a>
+              )
+            )}
+          </div>
+
+          {/* Si les liens changent selon la version, on l'indique */}
+          {hasDifferentGithubLinks && (
+            <div className="mb-6">
+              <p className="text-xs text-blue-400">
+                ⚠️ Les liens GitHub changent selon la version sélectionnée.
+              </p>
+            </div>
           )}
 
           <div className="mb-6">

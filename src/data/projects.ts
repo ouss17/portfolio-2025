@@ -503,8 +503,8 @@ export const projects = [
           { img: linked3, alt: "Linked v1 - 3" },
           { img: linked4, alt: "Linked v1 - 4" }
         ],
-        githubLink: null,
-        githubLinkBackend: null
+        githubLink: "https://github.com/ouss17/linked_front",
+        githubLinkBackend: "https://github.com/ouss17/linked_back"
       },
       {
         version: "v2",
