@@ -80,6 +80,12 @@ import portfolio2 from '../assets/projects/portfolio2.png';
 import portfolio3 from '../assets/projects/portfolio3.png';
 import portfolio4 from '../assets/projects/portfolio4.png';
 import portfolio5 from '../assets/projects/portfolio5.png';
+import vaultMyPassword1 from '../assets/projects/vaultMyPassword_1.jpg';
+import vaultMyPassword2 from '../assets/projects/vaultMyPassword_2.jpg';
+import vaultMyPassword3 from '../assets/projects/vaultMyPassword_3.jpg';
+import vaultMyPassword4 from '../assets/projects/vaultMyPassword_4.jpg';
+import vaultMyPassword5 from '../assets/projects/vaultMyPassword_5.jpg';
+import vaultMyPassword6 from '../assets/projects/vaultMyPassword_6.jpg';
 import { g } from 'framer-motion/client';
 
 export const projects = [
@@ -707,5 +713,36 @@ export const projects = [
       }
     ],
     link: "https://portfolio-2020-vl56.vercel.app"
+  },
+  {
+    key: "vaultMyPassword",
+    title: "Vault My Password",
+    description: [
+      "Vault My Password est une application mobile de gestion de mots de passe sécurisée, permettant aux utilisateurs de stocker, organiser et accéder facilement à leurs mots de passe et informations sensibles."
+    ],
+    githubLink: "https://github.com/ouss17/vault-my-password",
+    githubLinkBackend: null,
+    image: vaultMyPassword2,
+    tags: ["expo", "react native", "redux"],
+    versions: [
+      {
+        version: "v1",
+        technos: [
+          { name: "expo", percentage: 40 },
+          { name: "redux", percentage: 30 },
+          { name: "react native", percentage: 15 },
+        ],
+        slides: [
+          { img: vaultMyPassword1, alt: "vaultMyPassword 1" },
+          { img: vaultMyPassword2, alt: "vaultMyPassword 2" },
+          { img: vaultMyPassword3, alt: "vaultMyPassword 3" },
+          { img: vaultMyPassword4, alt: "vaultMyPassword 4" },
+          { img: vaultMyPassword5, alt: "vaultMyPassword 5" },
+          { img: vaultMyPassword6, alt: "vaultMyPassword 6" }
+        ],
+        githubLink: "https://github.com/ouss17/vault-my-password",
+        githubLinkBackend: null
+      }
+    ]
   }
 ];
