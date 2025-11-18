@@ -86,6 +86,13 @@ import vaultMyPassword3 from '../assets/projects/vaultMyPassword_3.jpg';
 import vaultMyPassword4 from '../assets/projects/vaultMyPassword_4.jpg';
 import vaultMyPassword5 from '../assets/projects/vaultMyPassword_5.jpg';
 import vaultMyPassword6 from '../assets/projects/vaultMyPassword_6.jpg';
+import manageo1 from '../assets/projects/manageo_1.jpg';
+import manageo2 from '../assets/projects/manageo_2.jpg';
+import manageo3 from '../assets/projects/manageo_3.jpg';
+import manageo4 from '../assets/projects/manageo_4.jpg';
+import manageo5 from '../assets/projects/manageo_5.jpg';
+import manageo6 from '../assets/projects/manageo_6.jpg';
+import manageo7 from '../assets/projects/manageo_7.jpg';
 import { g } from 'framer-motion/client';
 
 export const projects = [
@@ -741,6 +748,38 @@ export const projects = [
           { img: vaultMyPassword6, alt: "vaultMyPassword 6" }
         ],
         githubLink: "https://github.com/ouss17/vault-my-password",
+        githubLinkBackend: null
+      }
+    ]
+  },
+  {
+    key: "manageo",
+    title: "Manageo",
+    description: [
+      "Manageo est une application mobile de gestion de ses finances personnelles, permettant aux utilisateurs de suivre leurs dépenses, créer des budgets et visualiser des rapports financiers."
+    ],
+    githubLink: "https://github.com/AkhiDev-Official/manageo",
+    githubLinkBackend: null,
+    image: manageo1,
+    tags: ["expo", "react native", "redux"],
+    versions: [
+      {
+        version: "v1",
+        technos: [
+          { name: "expo", percentage: 40 },
+          { name: "redux", percentage: 30 },
+          { name: "react native", percentage: 15 },
+        ],
+        slides: [
+          { img: manageo1, alt: "manageo 1" },
+          { img: manageo2, alt: "manageo 2" },
+          { img: manageo3, alt: "manageo 3" },
+          { img: manageo4, alt: "manageo 4" },
+          { img: manageo5, alt: "manageo 5" },
+          { img: manageo6, alt: "manageo 6" },
+          { img: manageo7, alt: "manageo 7" }
+        ],
+        githubLink: "https://github.com/AkhiDev-Official/manageo",
         githubLinkBackend: null
       }
     ]
