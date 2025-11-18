@@ -542,7 +542,7 @@ export const projects = [
     key: "todoreaction",
     title: "ToDo'Réac'tion",
     description: [
-      "ToDo'Réac'tion est une application de gestion de tâches moderne, réalisée avec React Native, Redux Toolkit et Expo Router.",
+      "ToDo'Réac'tion est une application de gestion de tâches moderne, réalisée avec React Native, Redux et Expo Router.",
       "Fonctionnalités :",
       "- Ajout, édition et suppression de tâches",
       "- Gestion de la date et de l'heure d'échéance pour chaque tâche",
@@ -553,7 +553,7 @@ export const projects = [
     githubLink: "https://github.com/ouss17/expo-todolist",
     githubLinkBackend: null,
     image: todoreaction,
-    tags: ["expo", "react native", "typescript", "redux toolkit"],
+    tags: ["expo", "react native", "typescript", "redux"],
     versions: [
       {
         version: "v1",
@@ -561,7 +561,7 @@ export const projects = [
           { name: "expo", percentage: 40 },
           { name: "react native", percentage: 30 },
           { name: "typescript", percentage: 20 },
-          { name: "redux toolkit", percentage: 10 }
+          { name: "redux", percentage: 10 }
         ],
         slides: [
           { img: todoreaction1, alt: "todoreaction 1" },
@@ -587,13 +587,13 @@ export const projects = [
     githubLink: "https://github.com/ouss17/gachanote",
     githubLinkBackend: null,
     image: gachanote,
-    tags: ["expo", "react native", "typescript", "redux toolkit"],
+    tags: ["expo", "react native", "typescript", "redux"],
     versions: [
       {
         version: "v1",
         technos: [
           { name: "expo", percentage: 60 },
-          { name: "redux toolkit", percentage: 40 }
+          { name: "redux", percentage: 40 }
         ],
         slides: [
           { img: gachanote1, alt: "GachaNote v1 - 1" },
@@ -610,7 +610,7 @@ export const projects = [
           { name: "expo", percentage: 40 },
           { name: "react native", percentage: 30 },
           { name: "typescript", percentage: 20 },
-          { name: "redux toolkit", percentage: 10 }
+          { name: "redux", percentage: 10 }
         ],
         slides: [
           { img: gachanoteV2_1, alt: "GachaNote v2 - 1" },
